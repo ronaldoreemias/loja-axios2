@@ -1,0 +1,11 @@
+.imagem{
+    width: 100%;
+    border-radius: 8px; 
+    height: 100%; 
+}
+
+@media(max-width: 700px){
+    .imagem{
+        border-radius: 0px;
+    }
+}

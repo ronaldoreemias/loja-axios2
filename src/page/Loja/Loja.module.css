@@ -1,0 +1,291 @@
+.Body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "content content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 3px;
+  width: 80%;
+}
+
+.container div.header {
+  grid-area: header;
+  text-align: center;
+}
+
+.container div.Produtos {
+  grid-area: content;
+}
+.container div.Footer {
+  grid-area: footer;
+  text-align: center;  
+  
+}
+
+/* Grid Baner*/
+.containerbaner {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "content menu"
+    "footer footer";
+  grid-template-columns: 3fr 2fr;
+  gap: 5px;
+}
+
+.containerbaner div.headerbaner {
+  grid-area: header;
+  text-align: center;
+  display: none;
+}
+.containerbaner div.menubaner {
+  grid-area: menu;
+  display: block;
+  max-height: 300px;
+}
+
+.containerbaner div.menubaner img{
+  width: 100%;
+  height: 50%;
+  border-radius: 10px 10px 10px 10px;
+}
+.containerbaner div.contentbaner {
+  grid-area: content;
+  max-height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerbaner div.footerbaner {
+  grid-area: footer;
+  text-align: center;  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+}
+
+.containerbaner div.footerbaner{
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+.footerbaner button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  gap: 6px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.footerbaner button:hover{
+  transform: translateY(-1px); 
+}
+
+.footerbaner button img{
+  background-color: #2aa3c2;
+  border-radius: 10px;
+  padding: 10px 20px;
+  height: 20px;
+}
+
+/* grid dos produtos */
+.containerprodutos {
+  display: grid;
+  margin-top: 5%;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.containerprodutos .produtoCard {
+  padding: 10px;
+  max-height: 300px;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.produtoImagemContainer {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.produtoImagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.descontoTag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4444;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.produtoInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.produtoTitulo {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 0;
+  height: 40px;
+  overflow: hidden;
+}
+
+.produtoDescricao {
+  display: none;
+  font-size: 12px;
+  color: #666;
+  margin: 5px 0;
+  height: 40px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.produtoPreco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.botaoComprar {
+  background-color: #0891b2;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: auto;
+}
+
+.botaoComprar:hover:not(:disabled) {
+  background-color: #067694;
+}
+
+.botaoComprar:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.semProdutos {
+  grid-column: 1 / -1;
+  background-color: #f1f1f1;
+  padding: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Estilo para botão ativo */
+.footerbaner button.active {
+  background-color: #0891b2;
+  color: white;
+}
+
+/* Responsividade */
+@media(max-width: 700px){
+  .containerprodutos {
+    grid-template-columns: auto auto;
+  }
+  
+  .produtoImagemContainer {
+    height: 150px;
+  }
+  
+  .produtoTitulo {
+    font-size: 13px;
+    height: 35px;
+  }
+  
+  .produtoDescricao {
+    display: block;
+    font-size: 11px;
+    height: 35px;
+  }
+  
+  .produtoPreco {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 700px){
+    .containerbaner {
+        display: grid;
+        grid-template-areas:
+            "content content"
+            "header header"
+            "footer footer";
+        grid-template-columns: 3fr;
+        gap: 3px;
+    }
+
+    .container div.headerbaner {
+        grid-area: header;
+        text-align: center;
+        display: block;
+    }
+
+    .container div.menubaner {
+        grid-area: menu;
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+
+    .containerbaner div.contentbaner {
+      grid-area: content;
+      max-height: 200px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .footerbaner button{
+    padding: 5px 5px;
+  }
+  .footerbaner button img{
+    height: 20px;
+  }
+}

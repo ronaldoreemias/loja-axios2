@@ -100,7 +100,7 @@ function Loja() {
           <div className={Style.header}>
             <div className={Style.containerbaner}>
               <div className={Style.headerbaner}>
-                <h3>Sua segurança em primeiro lugar</h3>
+                
               </div>
               <div className={Style.menubaner}>
                 <img src={segura} alt="Banner e-commerce" />

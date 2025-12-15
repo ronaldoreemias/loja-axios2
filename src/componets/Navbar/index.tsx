@@ -104,14 +104,6 @@ function Navbar(){
                     </a>
                 </div>
             </div>
-            <div className={Style.partedebaixo}>
-                <p>segurança</p>
-                <p>Privacidade</p>
-                <p>Produtos confiaveis</p>
-                <p>Criptografia</p>
-                <p>Filtragem de dados</p>
-                <p>sem rastreio</p>
-            </div>
         </div>
     );
 }

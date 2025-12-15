@@ -2,14 +2,15 @@ import { useState } from "react";
 import Navbar from "../../componets/Navbar/index";
 import Style from "./Loja.module.css";
 import ImageSlider from "../Slide/index";
-import imagemlateralsegunda from "../../assets/slide/E-commerce2.jpg";
-import segura from "../../assets/slide/segura.jpg";
+import imagemlateralsegunda from "../../assets/slide/seguranca.jpg";
+import segura from "../../assets/slide/E-commerce.jpg";
 import celular from "../../assets/iconesbutton/mobile_102860.ico";
 import notebook from "../../assets/iconesbutton/notebook_computer_laptop_icon_185946.ico";
 import computador from "../../assets/iconesbutton/computer_115306.ico";
 import monitor from "../../assets/iconesbutton/monitor_icon-icons.com_74441.ico";
 import teclado from "../../assets/iconesbutton/keyboardbasicflat_106016.ico";
 import mouse from "../../assets/iconesbutton/mousemachd_106073.ico";
+import filt from "../../assets/iconesbutton/filtering_icon_246394.ico";
 
 
 const produtos = [
@@ -112,7 +113,7 @@ function Loja() {
               </div>
               <div className={Style.footerbaner}>
                 <button onClick={() => filtrar("Todos")}>
-                  Todos
+                  <img src={filt} alt="Notebook" className={Style.todos} />
                 </button>
                 <button onClick={() => filtrar("Celular")}>
                   <img src={celular} alt="Celular" />

@@ -2,7 +2,7 @@ import Style from "./Style.module.css";
 import { useState, useEffect } from "react";
 import imagemprimo from "../../assets/slide/E-commerce.jpg";
 import imagemsegundo from "../../assets/slide/E-commerce2.jpg";
-import imagemterceiro from "../../assets/slide/E-commerce3.jpg";
+import imagemterceiro from "../../assets/slide/a partir de R$500,00.jpg";
 
 const images = [
   imagemprimo,

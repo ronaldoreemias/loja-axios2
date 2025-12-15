@@ -84,12 +84,16 @@
     scrollbar-width: none; 
 }
 
+.footerbaner button .todos{
+  background-color: white;
+  height: 35px;
+}
+
 .footerbaner button{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px 10px;
   border-radius: 10px;
   border: none;
   gap: 6px;
@@ -103,10 +107,13 @@
 }
 
 .footerbaner button img{
-  background-color: #2aa3c2;
   border-radius: 10px;
   padding: 10px 20px;
   height: 20px;
+}
+
+.footerbaner button img:hover{
+  background-color: #64c5e0a1;
 }
 
 /* grid dos produtos */

@@ -79,7 +79,7 @@ function Loja() {
   const [filtro, setFiltro] = useState("Todos");
   const [produtosFiltrados, setProdutosFiltrados] = useState(produtos);
 
-  function filtrar(categoria) {
+  function filtrar(categoria: string) {
     setFiltro(categoria);
     
     if (categoria === "Todos") {

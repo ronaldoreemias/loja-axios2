@@ -58,5 +58,55 @@
     "desconto": "60% OFF",
     "preco": "R$ 1.528,00",
     "categoria": "Computador"
-  }  
+  },
+  {
+    "id": 7,
+    "titulo": "Volante gamer Logitech G29 G29 DRIVING FORCE cor preto",
+    "descricao": "Experiência de jogo imersiva: Perfeito para jogos de PlayStation 5, PS4 e PC, o Driving Force simula uma sensação real",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_730363-MLA99890032125_112025-F.webp",
+    "link": "https://mercadolivre.com/sec/1fdP6cR",
+    "desconto": "10% OFF",
+    "preco": "R$ 1.799",
+    "categoria": "console"
+  },
+  {
+    "id": 8,
+    "titulo": "Console Playstation 5 Slim Edição Digital 825 Gb",
+    "descricao": "Capacidade: 825 GB, Inclui controle, Resolução de 3840px x 2160px",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_677584-MLA99572203884_122025-F.webp",
+    "link": "https://mercadolivre.com/sec/2CkFizB",
+    "desconto": "26% OFF",
+    "preco": "R$ 2.929",
+    "categoria": "console"
+  },
+  {
+    "id": 9,
+    "titulo": "Smartphone Motorola Moto G56",
+    "descricao": "Memória RAM: 8 GB, Câmera frontal de 32Mpx, Processador Dimensity 7060 Octa-Core de 2.6GHz com 8GB de RAM, Tela HDR10+ de 6.7, Memória interna de 256GB",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_768160-MLA99910292031_112025-F.webp",
+    "link": "https://mercadolivre.com/sec/26sLEcr",
+    "desconto": "",
+    "preco": "R$ 1.190",
+    "categoria": "Celular"
+  },
+  {
+    "id": 10,
+    "titulo": "Notebook Lenovo Ideapad 1i Celeron Office 365 4gb 128gb W11",
+    "descricao": "Processador: Intel Celeron N4500 2C 2T 1.1-2.8GHz, Capacidade de disco SSD: 128 GB, Capacidade total do módulo de memória RAM: 4 GB, Conexão Wi-Fi e bluetooth.",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_679898-MLA99877172527_112025-F.webp",
+    "link": "https://mercadolivre.com/sec/1uEAHP8",
+    "desconto": "",
+    "preco": "R$ 1.799",
+    "categoria": "Notebook"
+  },
+  {
+    "id": 11,
+    "titulo": "Smart Tv Philco 50 P50eaa 4k Led Android Tv Dolby Audio 110v/220v",
+    "descricao": "Com conectividade via Bluetooth, Conta com wi-fi y porto de rede, Chromecast built in Embutido, Inclui controle remoto.",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_985720-MLA99931783357_112025-F.webp",
+    "link": "https://mercadolivre.com/sec/2hiauY4",
+    "desconto": "42% OFF",
+    "preco": "R$ 1.727",
+    "categoria": "Monitor"
+  }
 ]

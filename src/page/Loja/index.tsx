@@ -10,6 +10,7 @@ import monitor from "../../assets/iconesbutton/monitor_icon-icons.com_74441.ico"
 import teclado from "../../assets/iconesbutton/keyboardbasicflat_106016.ico";
 import mouse from "../../assets/iconesbutton/mousemachd_106073.ico";
 import filt from "../../assets/iconesbutton/filtering_icon_246394.ico";
+import controle from "../../assets/iconesbutton/game_console_market_icon_228249.ico";
 import { useState, useEffect } from "react";
 
 
@@ -59,6 +60,10 @@ function Loja() {
               <div className={Style.footerbaner}>
                 <button onClick={() => filtrar("Todos")}>
                   <img src={filt} alt="Notebook" className={Style.todos} />
+                </button>
+                <button onClick={() => filtrar("console")}>
+                  <img src={controle} alt="console" />
+                  Console
                 </button>
                 <button onClick={() => filtrar("Celular")}>
                   <img src={celular} alt="Celular" />

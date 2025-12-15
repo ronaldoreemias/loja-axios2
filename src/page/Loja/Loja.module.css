@@ -120,12 +120,12 @@
 .containerprodutos {
   display: grid;
   margin-top: 5%;
+  gap: 10px;
   grid-template-columns: auto auto auto auto auto auto;
 }
 
 .containerprodutos .produtoCard {
   padding: 10px;
-  max-height: 300px;
   font-size: 16px;
   text-align: center;
   display: flex;
@@ -172,7 +172,7 @@
   font-size: 14px;
   font-weight: bold;
   margin: 5px 0;
-  height: 40px;
+  height: 60px;
   overflow: hidden;
 }
 

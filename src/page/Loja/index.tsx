@@ -19,7 +19,7 @@ function Loja() {
   const [produtosFiltrados, setProdutosFiltrados] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("public/Dbjason/Produtos.json")
+    fetch("/Dbjason/Produtos.json")
       .then(response => response.json())
       .then(data => {
         setProdutos(data);

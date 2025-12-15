@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "../../componets/Navbar/index";
 import Style from "./Loja.module.css";
 import ImageSlider from "../Slide/index";
@@ -11,24 +10,31 @@ import monitor from "../../assets/iconesbutton/monitor_icon-icons.com_74441.ico"
 import teclado from "../../assets/iconesbutton/keyboardbasicflat_106016.ico";
 import mouse from "../../assets/iconesbutton/mousemachd_106073.ico";
 import filt from "../../assets/iconesbutton/filtering_icon_246394.ico";
-import produto from "../../Dbjason/Produtos.json";
+import { useState, useEffect } from "react";
 
-const produtos = produto;
 
 function Loja() {
   const [filtro, setFiltro] = useState("Todos");
-  const [produtosFiltrados, setProdutosFiltrados] = useState(produtos);
+  const [produtos, setProdutos] = useState<any[]>([]);
+  const [produtosFiltrados, setProdutosFiltrados] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("public/Dbjason/Produtos.json")
+      .then(response => response.json())
+      .then(data => {
+        setProdutos(data);
+        setProdutosFiltrados(data);
+      });
+  }, []);
 
   function filtrar(categoria: string) {
     setFiltro(categoria);
-    
+
     if (categoria === "Todos") {
       setProdutosFiltrados(produtos);
     } else {
-      const produtosFiltrados = produtos.filter(produto => 
-        produto.categoria === categoria
-      );
-      setProdutosFiltrados(produtosFiltrados);
+      const filtrados = produtos.filter(produto => produto.categoria === categoria);
+      setProdutosFiltrados(filtrados);
     }
   }
 

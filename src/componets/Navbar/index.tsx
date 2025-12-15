@@ -93,7 +93,7 @@ function Navbar(){
                     <FormFiltrar />
                 </div>
                 <div className={Style.links}>
-                    <a href="www.linkedin.com/in/ronaldo-reemias-b66b7a166">
+                    <a href="https://www.linkedin.com/in/ronaldo-reemias-b66b7a166/">
                         <img src={linkedin} />
                     </a>
                     <a href="https://github.com/ronaldoreemias" >

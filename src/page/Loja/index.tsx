@@ -12,6 +12,7 @@ import mouse from "../../assets/iconesbutton/mousemachd_106073.ico";
 import filt from "../../assets/iconesbutton/filtering_icon_246394.ico";
 import controle from "../../assets/iconesbutton/game_console_market_icon_228249.ico";
 import { useState, useEffect } from "react";
+import Produtos from "../../componets/Produto";
 
 
 function Loja() {
@@ -137,7 +138,7 @@ function Loja() {
           </div>
           
           <div className={Style.Footer}>
-            
+            <Produtos />
           </div>
         </div>
       </div>

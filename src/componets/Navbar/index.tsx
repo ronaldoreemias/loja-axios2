@@ -3,7 +3,7 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
-import carrinho from "../../assets/axios.ico";
+import carrinho from "../../assets/axios_logo_icon_168545.ico";
 import lupa from "../../assets/lupa.ico";
 import linkedin from "../../assets/linkedin_logo_square_icon_134016.ico";
 import github from "../../assets/github_icon-icons.com_60477.ico";

@@ -2,35 +2,20 @@ import Style from "./Produtos.module.css";
 import { useState, useEffect } from "react";
 
 function Produtos(){
-    const [filtro, setFiltro] = useState("Todos");
       const [produtos, setProdutos] = useState<any[]>([]);
-      const [produtosFiltrados, setProdutosFiltrados] = useState<any[]>([]);
     
       useEffect(() => {
-        fetch("/Dbjason/Produtos.json")
+        fetch("/Dbjason/Produtosvariados.json")
           .then(response => response.json())
           .then(data => {
             setProdutos(data);
-            setProdutosFiltrados(data);
           });
       }, []);
-    
-      function filtrar(categoria: string) {
-        setFiltro(categoria);
-    
-        if (categoria === "Todos") {
-          setProdutosFiltrados(produtos);
-        } else {
-          const filtrados = produtos.filter(produto => produto.categoria === categoria);
-          setProdutosFiltrados(filtrados);
-        }
-      }
     return(
          <div className={Style.container}>
             <div className={Style.header}>
                <div className={Style.cabecaheade}>
                     <div className={Style.cabecaheader}>
-                        <button onClick={() => filtrar} ></button>
                         <h3>CATEGORIA</h3>
                     </div>
                </div>
@@ -87,45 +72,52 @@ function Produtos(){
             </div>
             <div className={Style.content}>
                 <div className={Style.produtosderoupa}>
-                   {produtosFiltrados.length > 0 ? (
-                produtosFiltrados.map((produto) => (
-                  <div key={produto.id} className={Style.produtoCard}>
-                    <div className={Style.produtoImagemContainer}>
-                      <img 
-                        src={produto.imagem} 
-                        alt={produto.titulo}
-                        className={Style.produtoImagem}
-                      />
-                      {produto.desconto && (
-                        <span className={Style.descontoTag}>{produto.desconto}</span>
-                      )}
-                    </div>
-                    <div className={Style.produtoInfo}>
-                      <h4 className={Style.produtoTitulo}>{produto.titulo}</h4>
-                      <p className={Style.produtoDescricao}>{produto.descricao}</p>
-                      <div className={Style.produtoPreco}>
-                        <span>{produto.preco}</span>
-                      </div>
-                      <button 
-                        className={Style.botaoComprar}
-                        onClick={() => {
-                          if (produto.link) {
-                            window.open(produto.link, '_blank');
-                          }
-                        }}
-                        disabled={!produto.link}
-                      >
-                        {produto.link ? "Comprar Agora" : "Indisponível"}
-                      </button>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <div className={Style.semProdutos}>
-                  <p>Nenhum produto encontrado na categoria "{filtro}"</p>
-                </div>
-              )}
-
+                   {produtos.length > 0 ? (
+                        produtos
+                        .slice()
+                        .reverse()
+                        .map((produto) => (
+                            <div key={produto.id} className={Style.produtoCard}>
+                            <div className={Style.produtoImagemContainer}>
+                                <img 
+                                src={produto.imagem} 
+                                alt={produto.titulo}
+                                onClick={() => {
+                                    if (produto.link) {
+                                    window.open(produto.link, '_blank');
+                                    }
+                                }}
+                                className={Style.produtoImagem}
+                                />
+                                {produto.desconto && (
+                                <span className={Style.descontoTag}>{produto.desconto}</span>
+                                )}
+                            </div>
+                            <div className={Style.produtoInfo}>
+                                <h4 className={Style.produtoTitulo}>{produto.titulo}</h4>
+                                <p className={Style.produtoDescricao}>{produto.descricao}</p>
+                                <div className={Style.produtoPreco}>
+                                <span>{produto.preco}</span>
+                                </div>
+                                <button 
+                                className={Style.botaoComprar}
+                                onClick={() => {
+                                    if (produto.link) {
+                                    window.open(produto.link, '_blank');
+                                    }
+                                }}
+                                disabled={!produto.link}
+                                >
+                                {produto.link ? "Comprar Agora" : "Indisponível"}
+                                </button>
+                            </div>
+                            </div>
+                        ))
+                        ) : (
+                        <div className={Style.semProdutos}>
+                            <p>Nenhum produto encontrado</p>
+                        </div>
+                        )}
                 </div>
             </div>
         </div>

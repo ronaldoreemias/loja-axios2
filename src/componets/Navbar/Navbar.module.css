@@ -151,6 +151,73 @@
     border-radius: 5px;
 }
 
+.naotenhomaiscriatividade {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  position: relative; /* importante para o dropdown */
+}
+
+.resultados {
+  position: absolute;
+  top: 100%;
+  margin-top: 3%; 
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 0px 10px 10px 10px;
+  max-height: 500px;
+  overflow-y: auto;
+  z-index: 1000; 
+}
+.resultadoItem {
+    gap: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.resultadoItem:hover {
+    background-color: #f0f0f0;
+}
+
+.resultadoItem a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+
+}
+
+.resultadoItem a img {
+  height: 100%;
+  width: 20%;
+}
+
+.areatexto{
+    width: 78%;
+    text-align: end;
+}
+
+.areatexto p{
+    display: block;
+    font-size: 0.8rem;
+}
+
+.precoContainer{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    padding: 10px;
+}
+
+.desconto{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}
+
 @media(max-width: 700px){
     .partedecima{
         width: 90%;
@@ -194,4 +261,35 @@
         flex: none;
         text-align: left;
     }
+
+    .areatexto p{
+        display: none;
+    }
+    .resultadoItem a img {
+        height: 100%;
+        width: 30%;
+    }
+
+    .areatexto{
+        width: 70%;
+        text-align: end;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .precoContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: end;
+    }
+    .desconto{
+        padding: 5px;
+        text-align: end;
+        border-radius: 5px;
+        background-color: white;
+        color: red;
+    }
 }
+

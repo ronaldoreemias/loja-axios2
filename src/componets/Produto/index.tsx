@@ -30,10 +30,11 @@ function Produtos(){
             <div className={Style.header}>
                <div className={Style.cabecaheade}>
                     <div className={Style.cabecaheader}>
+                        <button onClick={() => filtrar} ></button>
                         <h3>CATEGORIA</h3>
                     </div>
                </div>
-                <div className={Style.containercategoria}>
+                <div className={Style.containercategoria} >
                     <div>
                         <img src="https://down-br.img.susercontent.com/file/br-50009109-111d4ee81a591253da7f8a9fc2775860@resize_w320_nl.webp"/>
                         <p>Feminino</p>

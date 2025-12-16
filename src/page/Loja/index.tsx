@@ -2,7 +2,7 @@ import Navbar from "../../componets/Navbar/index";
 import Style from "./Loja.module.css";
 import ImageSlider from "../Slide/index";
 import imagemlateralsegunda from "../../assets/slide/seguranca.jpg";
-import segura from "../../assets/slide/E-commerce.jpg";
+import segura from "../../assets/slide/Copilot_20251216_053607.png";
 import celular from "../../assets/iconesbutton/mobile_102860.ico";
 import notebook from "../../assets/iconesbutton/notebook_computer_laptop_icon_185946.ico";
 import computador from "../../assets/iconesbutton/computer_115306.ico";

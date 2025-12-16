@@ -72,7 +72,7 @@
 
 .produtosderoupa{
   display: grid;
-  width: 90%;
+  width: 100%;
   margin-top: 5%;
   gap: 15px;
   grid-template-columns: auto auto auto auto auto;
@@ -130,6 +130,7 @@
 
 .produtoTitulo {
   font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   margin: 5px 0;
   height: 60px;
@@ -149,7 +150,7 @@
 .produtoPreco {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin: 10px 0;
 }
 
